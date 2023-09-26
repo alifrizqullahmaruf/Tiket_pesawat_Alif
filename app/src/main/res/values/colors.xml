@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Biru_primary">#0E8CF3</color>
+    <color name="Biru_secondary">#26B7E3</color>
+    <color name="abu_abu">#D7D7D7</color>
+    <color name="gray">#D7D7D7</color>
+    <color name="blue">#26B7E3</color>
+    <color name="Btn">#006482</color>
+</resources>

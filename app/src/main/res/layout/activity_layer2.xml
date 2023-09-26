@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layer2_activity">
+
+
+    <!-- Icon back -->
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Text Judul -->
+    <TextView
+        android:id="@+id/judulText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:text="Pesan Tiket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20dp"
+        />
+
+    <!-- Card View -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_besar"
+        android:layout_width="355dp"
+        android:layout_height="573dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="78dp"
+        android:background="#FFF"
+        app:cardCornerRadius="20dp" 
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulText">
+
+        <!-- Card kecil -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_kecil"
+            android:layout_width="355dp"
+            android:layout_height="59dp"
+            android:background="#26B7E3"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/Biru_secondary"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            app:layout_constraintTop_toBottomOf="@+id/card_besar"
+            >
+
+            <LinearLayout
+                android:id="@id/card_kecil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Icon -->
+                <ImageView
+                    android:id="@+id/user_icon_kecil"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/user_icon_2"
+                    android:layout_margin="8dp"
+                    />
+
+                <!-- Text -->
+                <TextView
+                    android:id="@+id/desc_card_kecil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohon di isi sesuai dengan data di KTP"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Section_Nama_Penumpang -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Section_Nama_Penumpang"
+            android:layout_width="322dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toBottomOf="@+id/card_kecil"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            android:layout_marginTop="73dp"
+            android:layout_marginStart="13dp"
+            >
+
+            <!-- TextView: Nama Penumpang -->
+            <TextView
+                android:id="@+id/nama_penumpang_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Penumpang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="3dp"
+                android:textSize="13dp"
+                android:textColor="@color/black"
+                />
+
+            <!-- EditText: Nama Penumpang -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nama_penumpang_edittext"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="5dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====Section_Tujuan_dan_keberangkatan=====-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Section_Tujuan_dan_keberangkatan"
+            android:layout_width="312dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            app:layout_constraintTop_toTopOf="@+id/card_besar"
+            android:layout_marginTop="150dp"
+            android:layout_marginHorizontal="13dp"
+        >
+            <TextView
+                android:id="@+id/tv_Keberangkatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keberangkatan"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/Section_Tujuan_dan_keberangkatan"
+                app:layout_constraintTop_toTopOf="@+id/Section_Tujuan_dan_keberangkatan"
+                />
+            <TextView
+                android:id="@+id/tv_Tujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tujuan"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/Section_Tujuan_dan_keberangkatan"
+                app:layout_constraintTop_toTopOf="@+id/Section_Tujuan_dan_keberangkatan"
+                />
+            <Spinner
+                android:id="@+id/Spin_Keberangkatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/Section_Tujuan_dan_keberangkatan"
+                app:layout_constraintBottom_toBottomOf="@+id/Section_Tujuan_dan_keberangkatan"
+                android:textAlignment="center"
+                android:entries="@array/keberangkatan_tujuan"
+            />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                app:layout_constraintStart_toStartOf="@+id/Section_Tujuan_dan_keberangkatan"
+                app:layout_constraintBottom_toBottomOf="@+id/Section_Tujuan_dan_keberangkatan"
+                android:layout_marginHorizontal="140dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/abu_abu"
+            />
+            <Spinner
+                android:id="@+id/Spin_Tujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/Section_Tujuan_dan_keberangkatan"
+                app:layout_constraintBottom_toBottomOf="@+id/Section_Tujuan_dan_keberangkatan"
+                android:textAlignment="center"
+                android:entries="@array/keberangkatan_tujuan"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====Section_Anak2=====-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Section_Anak2"
+            android:layout_width="313dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            app:layout_constraintTop_toTopOf="@+id/card_besar"
+            android:layout_marginTop="240dp"
+            android:layout_marginHorizontal="13dp"
+            >
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/Tv_anak2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jumlah Penumpang"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@+id/Section_Anak2"
+                app:layout_constraintTop_toTopOf="@+id/Section_Anak2"
+                android:layout_marginVertical="3dp"/>
+
+            <!-- Tambahkan kode count di sini -->
+            <Button
+                android:id="@+id/incrementButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="+"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/Tv_anak2"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="95dp"
+                android:backgroundTint="@color/Biru_secondary"
+                android:onClick="incrementCount" />
+
+            <TextView
+                android:id="@+id/countText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/incrementButton"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <Button
+                android:id="@+id/decrementButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="-"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/Biru_secondary"
+                app:layout_constraintStart_toEndOf="@+id/countText"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="decrementCount" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--=====Tipe_Kelas=====-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Tipe_Kelas"
+            android:layout_width="312dp"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toTopOf="@+id/card_besar"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            android:layout_marginTop="323dp"
+            android:layout_marginStart="13dp"
+            >
+
+            <!-- TextView: Tipe_kelas -->
+            <TextView
+                android:id="@+id/Tv_Tipe_kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Tipe Kelas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="3dp"
+                android:textSize="10dp"
+                />
+
+            <!-- Spinner: Tipe_kelas -->
+            <Spinner
+                android:id="@+id/Spin_Tipe_kelas"
+                android:layout_width="313dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="5dp"
+                android:entries="@array/Tipe_Kelas"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====Section_Tanggal_keberangkatan=====-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Section_Tanggal_keberangkatan"
+            android:layout_width="312dp"
+            android:layout_height="90dp"
+            app:layout_constraintTop_toTopOf="@+id/card_besar"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            android:layout_marginTop="404dp"
+            android:layout_marginStart="13dp"
+
+
+            >
+            <!-- TextView: Tanggal_keberangkatan -->
+            <TextView
+                android:id="@+id/Tv_Tanggal_keberangkatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Keberangkatan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="3dp"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                />
+
+            <!-- DatePicker: Ed_Tanggal_keberangkatan -->
+            <DatePicker
+                android:id="@+id/Ed_Tanggal_keberangkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="15dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:spinnersShown="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====Button_submit=====-->
+        <Button
+            android:id="@+id/Button_submit"
+            android:layout_width="265dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="@+id/card_besar"
+            app:layout_constraintStart_toStartOf="@+id/card_besar"
+            android:layout_marginTop="510dp"
+            android:layout_marginHorizontal="45dp"
+            android:text="Pesan Sekarang"
+            android:backgroundTint="@color/Biru_primary"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

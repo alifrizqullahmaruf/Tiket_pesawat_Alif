@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layer3_activity">
+
+
+
+    <!-- Icon back -->
+    <ImageView
+        android:id="@+id/backIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Text Judul -->
+    <TextView
+        android:id="@+id/judulText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:text="Riwayat Perjalanan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_besar"
+        android:layout_width="305dp"
+        android:layout_height="170dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="98dp"
+        android:background="#FFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulText">
+
+        <!--=====bagian_atas=====-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bagian_atas"
+            android:layout_width="266dp"
+            android:layout_height="19dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="19dp"
+            >
+            <TextView
+                android:id="@+id/Tipe_Kelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bisnis"
+                android:textSize="10dp"
+                android:textColor="@color/Biru_secondary"
+                app:layout_constraintStart_toStartOf="@+id/bagian_atas"
+                app:layout_constraintTop_toTopOf="@+id/bagian_atas"
+                />
+            <TextView
+                android:id="@+id/Tanggal_pemesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Oktober 2023"
+                android:textSize="10dp"
+                android:textColor="@color/Biru_secondary"
+                app:layout_constraintEnd_toEndOf="@+id/bagian_atas"
+                app:layout_constraintTop_toTopOf="@+id/bagian_atas"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====bagian_Data=====-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bagian_Data"
+            android:layout_width="266dp"
+            android:layout_height="53dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_besar"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="19dp"
+
+            >
+            <ImageView
+                android:id="@+id/user_icon_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_icon_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/Nama_Penumpang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alif Rizqullah Maruf"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/user_icon_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/Harga"
+                android:layout_marginStart="13dp" />
+            <TextView
+                android:id="@+id/Harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp1.200.000"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@+id/user_icon_1"
+                app:layout_constraintTop_toBottomOf="@+id/Nama_Penumpang"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="4dp" />
+            <TextView
+                android:id="@+id/Penumpang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Penumpang"
+                android:textSize="10dp"
+                app:layout_constraintStart_toEndOf="@+id/user_icon_1"
+                app:layout_constraintTop_toBottomOf="@+id/Harga"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="4dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--=====bagian_tempat=====-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bagian_tempat"
+            android:layout_width="266dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="@+id/bagian_batas"
+            app:layout_constraintBottom_toTopOf="@+id/bagian_batas"
+            android:layout_marginTop="115dp"
+            android:layout_marginHorizontal="19dp"
+            >
+            <!--===keberangkatan===-->
+            <TextView
+                android:id="@+id/Tv_keberangkatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keberangkatan"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <!--===Keberangkatan_tempat===-->
+            <TextView
+                android:id="@+id/Keberangkatan_tempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jakarta"
+                android:textSize="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <!--===Tujuan===-->
+            <TextView
+                android:id="@+id/Tv_Tujuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tujuan"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <!--===Tujuan_tempat===-->
+            <TextView
+                android:id="@+id/Tujuan_tempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bandung"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
